@@ -23,7 +23,7 @@ const MouseFollowingLight = () => {
     }
 
     Animate();
-  }, []);
+  }, [animate, scope]);
 
   return (
     <motion.div

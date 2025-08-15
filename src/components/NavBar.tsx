@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useInView, Variants } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { showLoader, hideLoader } from "@/reducers/loadingReducer";
+import { showLoader } from "@/reducers/loadingReducer";
 
 // Animation variants for the dropdown menu container
 const menuVariants: Variants = {

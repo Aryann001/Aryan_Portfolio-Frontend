@@ -40,7 +40,7 @@ const HeroSection = () => {
           <div className="flex items-end">
             <SlideUpText>
               <p className="text-wrap font-raleway text-4xl leading-[2rem]">
-                Hi, I'm Aryan Baghel. A passionate Full Stack Developer based in
+                Hi, I&apos;m Aryan Baghel. A passionate Full Stack Developer based in
                 Bhopal, India. 
               </p>
             </SlideUpText>

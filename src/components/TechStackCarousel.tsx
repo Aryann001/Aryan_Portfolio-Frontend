@@ -6,6 +6,7 @@ import {
   useMotionValue,
 } from "framer-motion";
 import { StackItem } from "@/reducers/userReducers";
+import Image from "next/image";
 
 // --- Helper Function ---
 const wrap = (min: number, max: number, v: number): number => {
@@ -56,7 +57,7 @@ const TechStackCarousel: React.FC<TechStackCarouselProps> = ({
           style={{ width: `${itemWidth}px` }}
           title={item.description}
         >
-          <img 
+          <Image 
             src={item.image?.url} 
             alt={item.description} 
             className="h-16 w-16 object-contain"

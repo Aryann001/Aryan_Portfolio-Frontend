@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { LuBrainCircuit } from "react-icons/lu";
 import { SiWeb3Dotjs } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
-import Link from "next/link";
 
 const ServiceSection = () => {
   const ref = useRef(null);
@@ -29,7 +28,7 @@ const ServiceSection = () => {
           Services that we provide
         </h2>
         <p className="mt-4 text-[#3d2b1f]">
-          Let's build something amazing together.
+          Let&apos;s build something amazing together.
         </p>
       </motion.div>
 

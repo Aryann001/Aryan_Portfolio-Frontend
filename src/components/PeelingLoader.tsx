@@ -23,9 +23,6 @@ const CurtainLoader = () => {
   // Get the isLoading state from the Redux store
   const { isLoading } = useSelector((state: RootState) => state.loading);
 
-  // Define a reusable transition for a smooth, consistent feel
-  const transition = { duration: 0.8, ease: [0.85, 0, 0.15, 1] };
-
   return (
     // AnimatePresence is crucial for the exit animation to work correctly
     <AnimatePresence>
