@@ -57,7 +57,7 @@ const ContactPage = () => {
   // On component mount, hide the global loader.
   useEffect(() => {
     dispatch(hideLoader());
-  }, []); // Removed dispatch from dependency array as it's stable
+  }, [dispatch]); // Removed dispatch from dependency array as it's stable
   // ---------------------------------
 
   // Generate a unique thread ID once when the component mounts

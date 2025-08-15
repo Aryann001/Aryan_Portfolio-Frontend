@@ -5,7 +5,6 @@ import { fetchProjects } from "@/reducers/productsReducer"; // Adjust the import
 import { AppDispatch, RootState } from "@/store/store"; // Adjust the import path to your store
 import ProjectCard from "@/components/ProjectCard";
 import PaginationControls from "@/components/PaginationControls"; // Import the new component
-import { FaProjectDiagram } from "react-icons/fa";
 import { hideLoader } from "@/reducers/loadingReducer";
 
 // ... (LoadingSpinner and ErrorDisplay components remain the same) ...
