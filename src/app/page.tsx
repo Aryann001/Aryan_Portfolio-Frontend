@@ -7,20 +7,27 @@ import PeelWrapper from "@/components/PeelWrapper";
 import ServiceSection from "@/components/HomeSections/ServiceSection";
 import Footer from "@/components/HomeSections/Footer";
 import { useDispatch, useSelector } from "react-redux";
-import { hideLoader } from "@/reducers/loadingReducer";
+import { hideLoader, showLoader } from "@/reducers/loadingReducer";
 import { AppDispatch, RootState } from "@/store/store";
 import { fetchUser } from "@/reducers/userReducers";
 import { fetchProjects } from "@/reducers/productsReducer";
 
 const Page = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { isLoading: isUserLoading } = useSelector((state: RootState) => state.user);
-  const { isLoading: isProjectLoading } = useSelector((state: RootState) => state.projects);
-  const { isLoading: isGlobalLoading } = useSelector((state: RootState) => state.loading);
+  const { isLoading: isUserLoading } = useSelector(
+    (state: RootState) => state.user
+  );
+  const { isLoading: isProjectLoading } = useSelector(
+    (state: RootState) => state.projects
+  );
+  const { isLoading: isGlobalLoading } = useSelector(
+    (state: RootState) => state.loading
+  );
 
   // Effect to start fetching data.
   // We assume the loader is already visible by default from your Redux initial state.
   useEffect(() => {
+    dispatch(showLoader());
     dispatch(fetchUser());
     dispatch(fetchProjects());
   }, [dispatch]);
@@ -30,11 +37,7 @@ const Page = () => {
     // We check if the global loader is currently active AND if both data fetching
     // operations have completed.
     if (isGlobalLoading && !isUserLoading && !isProjectLoading) {
-      // If everything is loaded, hide the loader.
-      // A small delay can make the transition feel smoother.
-      setTimeout(() => {
-        dispatch(hideLoader());
-      }, 1500);
+      dispatch(hideLoader());
     }
   }, [isUserLoading, isProjectLoading, isGlobalLoading, dispatch]);
 
