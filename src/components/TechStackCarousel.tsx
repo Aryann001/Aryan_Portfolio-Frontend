@@ -59,7 +59,9 @@ const TechStackCarousel: React.FC<TechStackCarouselProps> = ({
         >
           <Image 
             src={item.image?.url} 
-            alt={item.description} 
+            alt={item.description}
+            width={64} 
+            height={64}
             className="h-16 w-16 object-contain"
             onError={(e) => { 
                 const target = e.target as HTMLImageElement;
